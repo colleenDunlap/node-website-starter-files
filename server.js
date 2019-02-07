@@ -4,5 +4,6 @@ const server = app.listen(7000, () => {
 	console.log(`Express Running -> PORT ${server.address().port}`);
 });
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.render('index', {title:'Homepage'});
 });
+app.set('view engine', 'pug');
